@@ -1,4 +1,4 @@
-class BestRPSPlayerEver
+class Yin
   def play(*args)
     screw_others
     'R'

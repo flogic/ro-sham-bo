@@ -21,20 +21,20 @@ end
 
 describe 'the yin bot' do
   before :each do
-    @bot = BestRPSPlayerEver.new
+    @bot = Yin.new
   end
 
   describe 'when initializing' do
     it 'should not accept arguments' do
-      lambda { BestRPSPlayerEver.new :foo }.should raise_error(ArgumentError)
+      lambda { Yin.new :foo }.should raise_error(ArgumentError)
     end
     
     it 'should succeed' do
-      lambda { BestRPSPlayerEver.new }.should_not raise_error
+      lambda { Yin.new }.should_not raise_error
     end
     
     it 'should return a bot of the correct class' do
-      BestRPSPlayerEver.new.should be_a_kind_of(BestRPSPlayerEver)
+      Yin.new.should be_a_kind_of(Yin)
     end
   end
 
