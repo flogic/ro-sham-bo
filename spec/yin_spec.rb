@@ -40,7 +40,7 @@ describe 'the yin bot' do
 
   describe 'once initialized' do
     it 'should have a name' do
-      @bot.name.should_not be_nil
+      @bot.name.should be_kind_of(String)
     end
     
     it 'should have a play method' do
@@ -70,7 +70,7 @@ describe 'the yin bot' do
     
     it 'should force other classes with #play methods to return scissors' do
       @bot.screw_others
-      [TestSucker, TestLoser, TestFool ].each do |klass|
+      [TestSucker, TestLoser, TestFool].each do |klass|
         klass.new.play.should == 'S'
       end
     end

@@ -40,7 +40,7 @@ describe 'the yang bot' do
 
   describe 'once initialized' do
     it 'should have a name' do
-      @bot.name.should_not be_nil
+      @bot.name.should be_kind_of(String)
     end
     
     it 'should have a play method' do
